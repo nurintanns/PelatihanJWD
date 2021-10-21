@@ -15,3 +15,4 @@ If(isset($_POST['simpan'])){
 	);
 	header("location:../index.php?p=buku");
 }
+?>

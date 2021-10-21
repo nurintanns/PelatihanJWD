@@ -1,10 +1,9 @@
 <div class="container">
-	<div class="container">
-		<h2 class="px-5 pb-4 fw-bold">Transaksi Peminjaman</h2>
-		<a class="ms-5 btn btn-success" href="index.php?p=transaksi-peminjaman-input">Transaksi Baru</a>
-		<div class="container-fluid px-5">
-			<table class="table table-striped ">
-				<thead>
+		<h2 class="mx-3">Transaksi Peminjaman</h2>
+		<a class="btn btn-success mx-3" href="index.php?p=transaksi-peminjaman-input">Transaksi Baru</a>
+		<div class="container py-4">
+			<table class="table">
+				<thead class="thead-dark">
 					<tr>
 						<th scope="col">No</th>
 						<th scope="col">ID Transaksi</th>
@@ -42,7 +41,7 @@
 							<td><?= $r_transaksi['tglpinjam']; ?></td>
 							<td>
 								<a class="btn btn-secondary"  href="cetak/nota-peminjaman.php?&id=<?php echo $r_transaksi['idtransaksi']; ?>" target="_blank">Ubah</a>
-								<a class="btn btn-danger" href="proses/pengembalian-proses.php?&id=<?php echo $r_transaksi['idtransaksi']; ?>">Hapus</a>
+								<a class="btn btn-danger" href="proses/pengembalian-proses.php?&id=<?php echo $r_transaksi['idtransaksi']; ?>" onclick="return confirm('Yakin Hapus?')">Hapus</a>
 							</td>
 						</tr>
 
@@ -51,5 +50,4 @@
 				</tbody>
 			</table>
 		</div>
-	</div>
 </div>

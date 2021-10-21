@@ -1,10 +1,9 @@
 <div class="container">
-	<div class="container">
-		<h2 class="px-5 pb-4 fw-bold">Tampil Data Buku</h2>
-		<a class="ms-5 btn btn-success"  href="index.php?p=buku-input">Tambah Buku</a>
-		<div class="container-fluid px-5">
-			<table class="table table-striped ">
-				<thead>
+	<h2 class="mx-3">Tampil Data Buku</h2>
+	<a class="btn btn-success mx-3" href="index.php?p=buku-input">Tambah Buku</a>
+	<div class="container py-4">
+			<table class="table">
+				<thead class="thead-dark">
 					<tr>
 						<th scope="col">No</th>
 						<th scope="col">ID Buku</th>
@@ -34,7 +33,7 @@
 						<td><?= $r_tampil_buku['penerbit']; ?></td>
 						<td>
 							<a class="btn btn-secondary" href="index.php?p=buku-edit&id=<?php echo $r_tampil_buku['idbuku'];?>">Ubah</a>
-							<a class="btn btn-danger" href="proses/buku-hapus.php?id=<?php echo $r_tampil_buku['idbuku']; ?>">Hapus</a>
+							<a class="btn btn-danger" href="proses/buku-hapus.php?id=<?php echo $r_tampil_buku['idbuku']; ?>" onclick="return confirm('Yakin Hapus?')">Hapus</a>
 						</td>
 					</tr>
 
@@ -43,5 +42,4 @@
 				</tbody>
 			</table>
 		</div>
-	</div>
 </div>

@@ -1,5 +1,4 @@
-<?php 
-
+<?php
 include'../koneksi.php';
 $id_anggota=$_POST['id_anggota'];
 $nama=$_POST['nama'];
@@ -16,3 +15,4 @@ if(isset($_POST['simpan'])){
 
 	header("location:../index.php?p=anggota");
 }
+?>

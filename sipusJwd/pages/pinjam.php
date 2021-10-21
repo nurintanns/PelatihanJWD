@@ -1,6 +1,5 @@
 <div id="content">
 	<table id="tabel-tampil">
-
 <html>
 <body>
 <h2> Pinjam </h2>

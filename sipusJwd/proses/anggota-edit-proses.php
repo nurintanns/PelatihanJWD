@@ -15,7 +15,6 @@ if(isset($_POST['simpan'])){
 	header("location:../index.php?p=anggota");
 }
 ?>
-
 <!-- SELECT a.idanggota, a.nama, b.tglpinjam, b.tglkembali FROM tbanggota a INNER JOIN tbtransaksi b on a.idanggota = b.idanggota
 
 

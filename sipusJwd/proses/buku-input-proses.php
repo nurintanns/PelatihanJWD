@@ -1,17 +1,17 @@
 <?php
 include'../koneksi.php';
-
 $id_buku=$_POST['id_buku'];
 $judul_buku=$_POST['judul_buku'];
 $kategori=$_POST['kategori'];
 $pengarang=$_POST['pengarang'];
 $penerbit=$_POST['penerbit'];
-
-If(isset($_POST['simpan'])){
+$status="Tersedia";
+	
+if(isset($_POST['simpan'])){
 	mysqli_query($db,
-		"UPDATE tbbuku
-		SET judulbuku='$judul_buku',kategori='$kategori',pengarang='$pengarang',penerbit='$penerbit'
-		WHERE idbuku='$id_buku'"
+		"INSERT INTO tbbuku
+		VALUES('$id_buku','$judul_buku','$kategori','$pengarang','$penerbit','$status')"
 	);
 	header("location:../index.php?p=buku");
 }
+?>
